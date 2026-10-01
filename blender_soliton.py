@@ -35,10 +35,9 @@ def soliton_frame_handler(scene):
     t = scene.frame_current * 0.1 
     
     mesh = obj.data
-    # Iterate through vertices and modify the Z axis
-    for vtx in mesh.vertices:
-        x = vtx.co.x
-        vtx.co.z = calculate_soliton_z(x, t, A, v, w)
+
+    for vtx in obj.data.vertices:
+        vtx.co.z = calculate_soliton_z(vtx.co.x, t, A, v, w)
 
 # --- PROPERTIES ---
 def init_properties():
