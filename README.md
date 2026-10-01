@@ -26,6 +26,11 @@ A Blender add-on that generates and animates a mathematical soliton wave (based 
 5. Press the **Spacebar** to play the timeline animation. You will see the wave start moving along the X-axis.
 6. Adjust the **Amplitude**, **Velocity**, and **Width** sliders in the panel to see the wave change in real-time.
 
+## Expected effect
+
+![blender-soliton-addon](blender-soliton-addon.png)
+
+
 ## Running Unit Tests (For Developers)
 
 The mathematical logic is separated from the Blender API to allow standalone testing. 
