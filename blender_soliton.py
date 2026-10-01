@@ -11,6 +11,15 @@ bl_info = {
 import bpy
 import math
 
+
+def calculate_soliton_z(x, t, A, v, w):
+    try:
+        val = w * (x - (v * t))
+        cosh_val = math.cosh(val)
+        return A / (cosh_val * cosh_val)
+    except OverflowError:
+        return 0.0
+
 # --- ANIMATION LOGIC (HANDLER) ---
 def soliton_frame_handler(scene):
     # Look for the object named "Soliton_Grid"
@@ -29,15 +38,7 @@ def soliton_frame_handler(scene):
     # Iterate through vertices and modify the Z axis
     for vtx in mesh.vertices:
         x = vtx.co.x
-        try:
-            # Formula: z = A * sech^2(w * (x - v*t))
-            # sech(val) = 1 / cosh(val)
-            val = w * (x - (v * t))
-            cosh_val = math.cosh(val)
-            vtx.co.z = A / (cosh_val * cosh_val)
-        except OverflowError:
-            # Protection against overly large cosh values (outside the wave's range)
-            vtx.co.z = 0.0
+        vtx.co.z = calculate_soliton_z(x, t, A, v, w)
 
 # --- PROPERTIES ---
 def init_properties():
