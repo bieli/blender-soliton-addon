@@ -10,11 +10,11 @@ In classical fluid mechanics, waves usually dissipate over time due to dispersio
 Why simulate solitons in 3D?
 The phenomenon described over a century ago by the Korteweg-de Vries (KdV) equation is not just a mathematical curiosity, but a foundation of the modern world. Solitons appear in many fascinating areas:
 
-- Fiber optic telecommunications: Optical solitons are light pulses that transmit data (like the internet) through deep-ocean cables without losing signal integrity over thousands of kilometers.
+- **Fiber optic telecommunications**: Optical solitons are light pulses that transmit data (like the internet) through deep-ocean cables without losing signal integrity over thousands of kilometers.
 
-- Extreme phenomena: Tsunamis are effectively gigantic, destructive hydrodynamic solitons capable of crossing entire oceans without losing energy.
+- **Extreme phenomena**: Tsunamis are effectively gigantic, destructive hydrodynamic solitons capable of crossing entire oceans without losing energy.
 
-- Molecular biology: It is theorized that energy within DNA and protein chains is transferred in the form of solitons.
+- **Molecular biology**: It is theorized that energy within DNA and protein chains is transferred in the form of solitons.
 
 The goal of this add-on is to bring raw physical equations into Blender, allowing creators to interactively manipulate this "immortal" wave type in real time. This provides educational value while generating organic, smooth, and mesmerizing animations without the need to manually keyframe individual vertices.
 
