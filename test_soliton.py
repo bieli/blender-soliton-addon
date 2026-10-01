@@ -2,10 +2,17 @@ import sys
 import unittest
 from unittest.mock import MagicMock
 
-sys.modules['bpy'] = MagicMock()
-sys.modules['bpy.props'] = MagicMock()
-sys.modules['bpy.types'] = MagicMock()
-sys.modules['bpy.utils'] = MagicMock()
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.append(current_dir)
+    
+try:
+    import bpy
+except ImportError:
+    sys.modules['bpy'] = MagicMock()
+    sys.modules['bpy.props'] = MagicMock()
+    sys.modules['bpy.types'] = MagicMock()
+    sys.modules['bpy.utils'] = MagicMock()
 
 from blender_soliton import calculate_soliton_z, soliton_frame_handler
 
