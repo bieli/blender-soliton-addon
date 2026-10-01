@@ -42,5 +42,7 @@ class TestSolitonHandler(unittest.TestCase):
         except Exception as e:
             self.fail(f"Handler rzucił wyjątek: {e}")
 
+
 if __name__ == '__main__':
-    unittest.main()
+    import sys
+    unittest.main(argv=['first-arg-is-ignored'])
