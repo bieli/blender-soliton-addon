@@ -2,6 +2,22 @@
 
 A Blender add-on that generates and animates a mathematical soliton wave (based on the Korteweg-de Vries equation) on a dense mesh grid. 
 
+## Motivation
+In August 1834, Scottish engineer John Scott Russell observed a horse-drawn barge along a narrow canal (the Union Canal in Scotland). When the boat suddenly stopped, the water ahead of it formed a single, smooth wave that separated and moved forward without losing its shape or speed. Fascinated by this phenomenon, Russell chased the wave on horseback for over a mile before it disappeared from sight. He named it the "Great Wave of Translation"—a phenomenon modern science calls a soliton.
+
+In classical fluid mechanics, waves usually dissipate over time due to dispersion. A soliton represents a unique case of perfect mathematical balance, where the dispersion effect is completely canceled out by non-linear focusing effects. This allows the soliton to travel vast distances in an unchanged form.
+
+Why simulate solitons in 3D?
+The phenomenon described over a century ago by the Korteweg-de Vries (KdV) equation is not just a mathematical curiosity, but a foundation of the modern world. Solitons appear in many fascinating areas:
+
+- Fiber optic telecommunications: Optical solitons are light pulses that transmit data (like the internet) through deep-ocean cables without losing signal integrity over thousands of kilometers.
+
+- Extreme phenomena: Tsunamis are effectively gigantic, destructive hydrodynamic solitons capable of crossing entire oceans without losing energy.
+
+- Molecular biology: It is theorized that energy within DNA and protein chains is transferred in the form of solitons.
+
+The goal of this add-on is to bring raw physical equations into Blender, allowing creators to interactively manipulate this "immortal" wave type in real time. This provides educational value while generating organic, smooth, and mesmerizing animations without the need to manually keyframe individual vertices.
+
 ## Features
 * **Custom Mesh Generation:** One-click generation of a subdivided grid optimized for wave propagation.
 * **Real-time Animation:** Automatically calculates vertex displacements on the Z-axis based on the current frame.
