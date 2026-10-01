@@ -1,14 +1,7 @@
 import unittest
 from unittest.mock import MagicMock
+from blender_soliton import calculate_soliton_z
 
-import math
-def calculate_soliton_z(x, t, A, v, w):
-    try:
-        val = w * (x - (v * t))
-        cosh_val = math.cosh(val)
-        return A / (cosh_val * cosh_val)
-    except OverflowError:
-        return 0.0
 
 class TestSolitonMath(unittest.TestCase):
     
