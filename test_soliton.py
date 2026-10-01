@@ -1,7 +1,13 @@
+import sys
 import unittest
 from unittest.mock import MagicMock
-from blender_soliton import calculate_soliton_z
 
+sys.modules['bpy'] = MagicMock()
+sys.modules['bpy.props'] = MagicMock()
+sys.modules['bpy.types'] = MagicMock()
+sys.modules['bpy.utils'] = MagicMock()
+
+from blender_soliton import calculate_soliton_z, soliton_frame_handler
 
 class TestSolitonMath(unittest.TestCase):
     
