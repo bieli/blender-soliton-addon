@@ -96,17 +96,26 @@ classes = (
     VIEW3D_PT_soliton,
 )
 
+def menu_func(self, context):
+    self.layout.operator(MESH_OT_add_soliton.bl_idname, icon='MESH_GRID')
+
 def register():
     for cls in classes:
         bpy.utils.register_class(cls)
     init_properties()
-    # Add a handler that triggers before frame change
-    bpy.app.handlers.frame_change_pre.append(soliton_frame_handler)
+    
+    bpy.types.VIEW3D_MT_mesh_add.append(menu_func)
+    
+    if soliton_frame_handler not in bpy.app.handlers.frame_change_pre:
+        bpy.app.handlers.frame_change_pre.append(soliton_frame_handler)
 
 def unregister():
     for cls in reversed(classes):
         bpy.utils.unregister_class(cls)
     clear_properties()
+    
+    bpy.types.VIEW3D_MT_mesh_add.remove(menu_func)
+    
     if soliton_frame_handler in bpy.app.handlers.frame_change_pre:
         bpy.app.handlers.frame_change_pre.remove(soliton_frame_handler)
 
