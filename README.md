@@ -1,6 +1,6 @@
 # Soliton Wave Generator
 
-A Blender add-on that generates and animates a mathematical soliton wave (based on the Korteweg-de Vries equation) on a dense mesh grid. 
+A Blender add-on that generates and animates a mathematical soliton wave (based on the [Korteweg-de Vries](https://en.wikipedia.org/wiki/Korteweg%E2%80%93De_Vries_equation) equation) on a dense mesh grid. 
 
 ## Motivation
 In August 1834, Scottish engineer John Scott Russell observed a horse-drawn barge along a narrow canal (the Union Canal in Scotland). When the boat suddenly stopped, the water ahead of it formed a single, smooth wave that separated and moved forward without losing its shape or speed. Fascinated by this phenomenon, Russell chased the wave on horseback for over a mile before it disappeared from sight. He named it the "Great Wave of Translation"-a phenomenon modern science calls a soliton.
